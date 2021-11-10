@@ -1,0 +1,189 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#010409;
+    box-sizing: border-box;
+}
+.calenderCont{
+    width:900px;
+    background-color:#010409;
+    border:1px solid #161b22;
+    margin:10px;
+    border-radius:5px;
+    
+}
+.calenderInner{
+   width: 100%;
+   height:100%;
+   background-color:#010409;
+   padding:10px 15px;
+   position:relative;
+}
+.calenderFrame{
+    height:auto;
+    overflow:hidden;
+    width:100%;
+    background-color:#010409;
+    
+}
+.calenderBoxHolder{
+    height:114px;
+    width:100%;
+    display:flex;
+    background-color:#010409;
+}
+.calenderTextWarpper{
+    /* margin: 0 auto 0 -423px;
+    position: relative; */
+    width:846px;
+    /* left:50%; */
+    display: flex;
+}
+.calenderTextWarpper span{
+    font-size:10px;
+    width:70px;
+    display:block;
+    color:#FFFFFF;
+    margin-bottom:6px;
+    margin-top:9px;
+    
+}
+.calenderTextWarpperInner{
+    padding-left:-5px;
+    display: flex;
+    width:873px;
+    padding-bottom:5px;
+}
+.calenderColCont{
+    width:855px;
+    display:flex;
+}
+.calenderCol{
+    width:15.5px;
+
+}
+.smallBox{
+    width:15.5px;
+    height:15.5px;
+    background-color:#010409;
+    padding:2.15px 2px;
+    
+}
+.smallBox span{
+    display:block;
+    width:100%;
+    height:100%;
+    border-radius:2px;
+    background-color:#161b22;
+    cursor: pointer;
+}
+.calenderDays{
+    width:25px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+.calenderDays span{
+    color:#FFFFFF;
+    font-size:10px;
+    display:block;
+    height:34px;
+}
+.calenderDays span:first-child{
+    margin-top:15px;
+}
+.calenderBottom{
+    display: flex;
+    justify-content:space-between;
+    padding:15px 25px;
+}
+
+.calenderBottom .leftText{
+    font-size:12px;
+    color:#FFFFFF;
+}
+.calenderBottom .rightText{
+    font-size:10px;
+    color:#FFFFFF;
+    display: flex;
+}
+.calenderBottom span{
+    font-size:12px;
+    color:#FFFFFF;
+    margin-right:7px;
+}
+.calenderBottom .rightText .colorBox{
+     background-color:green;
+     display: block;
+     width:12px;
+     height:12px;
+     border-radius:1.5px;
+}
+.Pop {
+    height:200px;
+    width:200px;
+    margin-right:20px;
+    transform:translate(0, -50%);
+    padding:20px 30px;
+    color:#666666;
+    background-color:#FFFFE0;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    display:none;
+    border:1px solid #DCA;
+    display:block;
+    text-align:left;
+}
+.Pop h3{
+    margin:12px 0px;
+}
+.calenderInner:hover .Pop {
+    display:block;
+}
+
+.Pop i{
+    position:absolute;
+    top:50%;
+    left:100%;
+    margin-top:-12px;
+    width:12px;
+    height:24px;
+    overflow:hidden;
+}
+
+.Pop i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:0;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-45deg);
+    background-color:#FFFFE0;
+    border:1px solid #DCA;
+}
+@media only screen and (max-width: 930px) {
+
+    .calenderBoxHolder{
+        margin: 0 auto 0 -846px;
+        position: relative;
+        left:100%;
+    }
+    .calenderTextWarpper{
+        margin: 0 auto 0 -846px;
+        position: relative;
+        left:100%;
+        
+
+    }
+    .calenderCont{
+        width: 95vw;
+    }
+}
