@@ -7,42 +7,38 @@ body{
     background-color:#010409;
     box-sizing: border-box;
 }
-.calenderCont{
+.calendarCont{
     width:900px;
     background-color:#010409;
-    border:1px solid #161b22;
+    border:2px solid #161b22;
     margin:10px;
     border-radius:5px;
-    
+    /* margin-left:300px; */
 }
-.calenderInner{
+.calendarInner{
    width: 100%;
    height:100%;
    background-color:#010409;
-   padding:10px 15px;
-   position:relative;
+   padding:20px 15px 10px;
 }
-.calenderFrame{
+.calendarFrame{
     height:auto;
     overflow:hidden;
     width:100%;
     background-color:#010409;
     
 }
-.calenderBoxHolder{
+.calendarBoxHolder{
     height:114px;
     width:100%;
     display:flex;
     background-color:#010409;
 }
-.calenderTextWarpper{
-    /* margin: 0 auto 0 -423px;
-    position: relative; */
+.calendarTextWarpper{
     width:846px;
-    /* left:50%; */
     display: flex;
 }
-.calenderTextWarpper span{
+.calendarTextWarpper span{
     font-size:10px;
     width:70px;
     display:block;
@@ -51,17 +47,17 @@ body{
     margin-top:9px;
     
 }
-.calenderTextWarpperInner{
+.calendarTextWarpperInner{
     padding-left:-5px;
     display: flex;
     width:873px;
     padding-bottom:5px;
 }
-.calenderColCont{
+.calendarColCont{
     width:855px;
     display:flex;
 }
-.calenderCol{
+.calendarCol{
     width:15.5px;
 
 }
@@ -80,42 +76,45 @@ body{
     background-color:#161b22;
     cursor: pointer;
 }
-.calenderDays{
+.calendarDays{
     width:25px;
     height:100%;
     display:flex;
     flex-direction:column;
 }
-.calenderDays span{
+.calendarDays span{
     color:#FFFFFF;
     font-size:10px;
     display:block;
     height:34px;
 }
-.calenderDays span:first-child{
+.calendarDays span:first-child{
     margin-top:15px;
 }
-.calenderBottom{
+.calendarBottom{
     display: flex;
     justify-content:space-between;
-    padding:15px 25px;
+    padding:8px 25px;
 }
 
-.calenderBottom .leftText{
+.calendarBottom .leftText{
     font-size:12px;
     color:#FFFFFF;
+    text-align:left;
+    color:#8b949e;
 }
-.calenderBottom .rightText{
+.calendarBottom .rightText{
     font-size:10px;
     color:#FFFFFF;
     display: flex;
 }
-.calenderBottom span{
-    font-size:12px;
+.calendarBottom span{
+    font-size:11px;
     color:#FFFFFF;
     margin-right:7px;
+    color:#8b949e;
 }
-.calenderBottom .rightText .colorBox{
+.calendarBottom .rightText .colorBox{
      background-color:green;
      display: block;
      width:12px;
@@ -144,7 +143,7 @@ body{
 .Pop h3{
     margin:12px 0px;
 }
-.calenderInner:hover .Pop {
+.calendarInner:hover .Pop {
     display:block;
 }
 
@@ -171,19 +170,23 @@ body{
 }
 @media only screen and (max-width: 930px) {
 
-    .calenderBoxHolder{
+    .calendarBoxHolder{
         margin: 0 auto 0 -846px;
         position: relative;
         left:100%;
     }
-    .calenderTextWarpper{
+    .calendarTextWarpper{
         margin: 0 auto 0 -846px;
         position: relative;
         left:100%;
         
 
     }
-    .calenderCont{
+    .calendarCont{
         width: 95vw;
+        margin:15px auto;
+    }
+    .calendarBottom{
+        padding:8px 8px;
     }
 }

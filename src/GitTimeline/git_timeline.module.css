@@ -1,0 +1,61 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.timeline {
+  background: transparent;
+  margin: 20px;
+  padding: 20px;
+  width:900px;
+  box-sizing: border-box;
+}
+
+.outer {
+  border-left: 2px solid #333;
+}
+
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #010409;
+  color: gray;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align:left;
+}
+
+.title {
+  position: relative;
+  color: #8b949e;
+  text-align:left;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background:#FFFFFF;
+  border-radius: 999px;
+  left: -50px;
+  padding:3px;
+  background-image: url('./calendar-event.svg');
+  filter: invert(64%) sepia(15%) saturate(214%) hue-rotate(171deg) brightness(89%) contrast(92%);
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  background-position:center;
+}
+@media only screen and (max-width: 930px) {
+    .timeline{
+        width:95vw;
+        margin:15px auto;
+    }
+}

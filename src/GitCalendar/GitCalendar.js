@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import ReactDOM from 'react-dom';
-import styles from './git_calender.module.css';
-const GitCalender=(props)=>{
+import styles from './git_calendar.module.css';
+const GitCalendar=(props)=>{
     
     let months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const [mouse,setMouse]=useState({x:0,y:0,col:0});
@@ -14,17 +14,18 @@ const GitCalender=(props)=>{
     }
 
     return(
-        <div className={styles.calenderCont}>
-        <div className={styles.calenderInner}>
-          <div className={styles.calenderFrame}>
-            <div className={styles.calenderTextWarpper}>
-              <div className={styles.calenderTextWarpperInner}>
+       <><div style={{display:'block',width:'100px',height:'20px'}}></div>
+        <div className={styles.calendarCont} onMouseLeave={()=>setDisplay('none')}>
+        <div className={styles.calendarInner}>
+          <div className={styles.calendarFrame}>
+            <div className={styles.calendarTextWarpper}>
+              <div className={styles.calendarTextWarpperInner}>
                 {months.map((month)=><span>{month}</span>)}
                </div>
             </div>
-             <div className={styles.calenderBoxHolder}>
-               <div className={styles.calenderColCont}>
-                 <div className={styles.calenderDays}>
+             <div className={styles.calendarBoxHolder}>
+               <div className={styles.calendarColCont}>
+                 <div className={styles.calendarDays}>
                    <span>Mon</span>
                    <span>Wed</span>
                    <span>Fry</span>
@@ -36,7 +37,7 @@ const GitCalender=(props)=>{
                    
           </div>
           </div>
-          <div className={styles.calenderBottom}>
+          <div className={styles.calendarBottom}>
              <p className={styles.leftText}>Learn how we count contributions</p>
              <p className={styles.rightText}>
                <span>Less</span>
@@ -49,7 +50,7 @@ const GitCalender=(props)=>{
           </div>
          <Pop mouse={mouse} display={display}/>
         </div>
-        </div>
+        </div></>
     );
 }
 
@@ -59,7 +60,6 @@ const Pop=(props)=>{
               <h3>Lorem Ipsum</h3>
               <ul>
                 <li>Aliquam ac odio ut est aliquet tempor vitae sed arcu</li>
-                <li>Cras porttitor orci ac porta gravida</li>
              </ul>
           </div>
         );
@@ -67,7 +67,7 @@ const Pop=(props)=>{
 
 const WeekColumn=(props)=>{
     return(
-         <div className={styles.calenderCol}>
+         <div className={styles.calendarCol}>
              {
               [...Array(7)].map( (item)=><DayBox handleMouseMove={props.handleMouseMove} hanleTooltip={props.hanleTooltip} col={props.col}/>)
              }
@@ -83,14 +83,10 @@ const DayBox = (props)=>{
 
     }
     const hanleTooltip=(display)=>{
-      if(display=='block'){
+      // if(display=='block'){
         setTimeout(()=>{
           props.hanleTooltip(display)
-        },1500)
-      }else{
-        props.hanleTooltip(display)
-      }
-      
+        },200)
     }
     return(
         <div 
@@ -103,4 +99,4 @@ const DayBox = (props)=>{
     );
 }
 
-export default GitCalender;
+export default GitCalendar;
