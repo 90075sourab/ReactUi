@@ -56,7 +56,7 @@ const GitCalendar=(props)=>{
 
 const Pop=(props)=>{       
   return (
-          <div className={styles.Pop} style={{left:(props.mouse.col>39?((props.mouse.x-220)+'px'):(props.mouse.x+'px')),top:(props.mouse.y+'px'),display:props.display}}>
+          <div className={styles.Pop} style={{left:(props.mouse.col>39?((props.mouse.x-220)+'px'):((props.mouse.x+20)+'px')),top:(props.mouse.y+'px'),display:props.display}}>
               <h3>Lorem Ipsum</h3>
               <ul>
                 <li>Aliquam ac odio ut est aliquet tempor vitae sed arcu</li>
@@ -83,10 +83,10 @@ const DayBox = (props)=>{
 
     }
     const hanleTooltip=(display)=>{
-      // if(display=='block'){
+        props.hanleTooltip('none')
         setTimeout(()=>{
-          props.hanleTooltip(display)
-        },200)
+          props.hanleTooltip('block')
+        },1700)
     }
     return(
         <div 
